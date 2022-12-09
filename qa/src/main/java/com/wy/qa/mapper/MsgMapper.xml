@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wy.qa.mapper.MsgMapper">
+    <resultMap id="MsgMap" type="Msg">
+        <id property="msgId" column="msg_id"/>
+        <result property="senderId" column="msg_sender_id"/>
+        <result property="recipientId" column="msg_recipient_id"/>
+        <result property="content" column="msg_content"/>
+        <result property="status" column="status"/>
+        <result property="sendTime" column="msg_send_time"/>
+    </resultMap>
+
+    <resultMap id="MsgAndUserMap" type="Msg" extends="MsgMap">
+        <association property="sender" javaType="User">
+            <id property="userId" column="msg_sender_id"/>
+            <result property="username" column="senderName"/>
+        </association>
+        <association property="recipient" column="msg_recipient_id" javaType="User"
+                     resultMap="com.wy.qa.mapper.UserMapper.UserMap"/>
+    </resultMap>
+
+    <select id="queryById" parameterType="int" resultMap="MsgAndUserMap">
+        select m.*, username as senderName
+        from t_msg m
+                 inner join t_user u
+                            on m.msg_sender_id = u.user_id
+        where msg_recipient_id = #{recipientId}
+    </select>
+
+</mapper>

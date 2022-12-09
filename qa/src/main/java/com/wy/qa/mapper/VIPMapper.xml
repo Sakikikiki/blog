@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wy.qa.mapper.VIPMapper">
+    <resultMap id="VIPMap" type="VIP">
+        <id property="id" column="vip_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+    </resultMap>
+
+    <resultMap id="VIPAndUserMap" type="VIP" extends="VIPMap">
+        <association property="user" column="user_id" javaType="User" resultMap="com.wy.qa.mapper.UserMapper.UserMap"/>
+    </resultMap>
+
+
+</mapper>

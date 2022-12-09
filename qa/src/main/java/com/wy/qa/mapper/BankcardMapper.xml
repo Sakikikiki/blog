@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wy.qa.mapper.BankcardMapper">
+    <resultMap id="BankcardMap" type="Bankcard">
+        <id property="seqId" column="seq_id"/>
+        <result property="cardId" column="card_id"/>
+        <result property="cardPwd" column="card_pwd"/>
+        <result property="balance" column="balance"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+
+    <resultMap id="BankcardAndUserMap" type="Bankcard" extends="BankcardMap">
+        <association property="user" column="user_id" javaType="User" resultMap="com.wy.qa.mapper.UserMapper.UserMap"/>
+        <association property="user" column="username" javaType="User" resultMap="com.wy.qa.mapper.UserMapper.UserMap"/>
+    </resultMap>
+
+    <update id="deduction" parameterType="map">
+        update t_bankcard
+        set balance = (select balance
+                       from t_bankcard
+                       where card_id = #{cardId}) - #{number}
+        where card_id = #{cardId}
+    </update>
+
+
+</mapper>

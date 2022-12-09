@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wy.qa.mapper.ReplyMapper">
+    <resultMap id="ReplyMap" type="Reply">
+        <id property="replyId" column="reply_id"/>
+        <result property="content" column="reply_content"/>
+        <result property="status" column="status"/>
+        <result property="likes" column="likes"/>
+        <result property="postId" column="post_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="replyTime" column="reply_time"/>
+    </resultMap>
+
+    <resultMap id="ReplyAndPostAndUserMap" type="Reply" extends="ReplyMap">
+        <association property="post" column="post_id" javaType="Post"
+                     resultMap="com.wy.qa.mapper.PostMapper.PostMap"/>
+        <association property="user" column="user_id" javaType="User"
+                     resultMap="com.wy.qa.mapper.UserMapper.UserMap"/>
+    </resultMap>
+
+    <select id="queryByIdAndSize" parameterType="map" resultMap="ReplyAndPostAndUserMap">
+        select reply_id, reply_content, status, likes, post_id, user_id, reply_time
+        from (select reply_id,
+                     reply_content,
+                     status,
+                     likes,
+                     post_id,
+                     user_id,
+                     reply_time,
+                     rownum as rn
+              from (select *
+                    from t_reply
+                    where user_id = #{userId}
+                    order by reply_time desc))
+        where rn &gt; 0
+          and rn &lt;= #{size}
+    </select>
+
+
+</mapper>
