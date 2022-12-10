@@ -156,10 +156,14 @@
         $("#loginForm").ajaxSubmit({
             dataType: "text",
             success: function (responseText) {
-                if (responseText === "success") {
+                if (responseText === "200") {
                     location.href = "user/home.jsp";
                 } else {
-                    alert("验证码错误");
+                    if (responseText === "wrong code") {
+                        alert("验证码错误");
+                    } else {
+                        alert("该账号已被封禁");
+                    }
                     $.ajax({
                         type: "GET",
                         url: "user/question",

@@ -26,7 +26,7 @@ public class UserController {
         if (!answer.equals(serverAnswer)) {
             //人类验证失败
             session.removeAttribute("answer");
-            return "fail";
+            return "验证码错误";
         } else {
             //人类验证成功
             session.removeAttribute("answer");
@@ -35,7 +35,7 @@ public class UserController {
             } catch (QaException e) {
                 e.printStackTrace();
             }
-            return "success";
+            return "200";
         }
     }
 
@@ -46,19 +46,24 @@ public class UserController {
         if (!answer.equals(severAnswer)) {
             //人类验证失败
             session.removeAttribute("answer");
-            return "fail";
+            return "wrong code";
         } else {
             //人类验证成功
             session.removeAttribute("answer");
             try {
                 User user = userService.login(email, pwd);
-                session.setAttribute("user", user);
+                if (user.getStatus() == 2) {
+                    //账号被封禁
+                    return "status error";
+                } else {
+                    //账号未被封禁
+                    session.setAttribute("user", user);
+                }
             } catch (QaException e) {
                 e.printStackTrace();
             }
-            return "success";
+            return "200";
         }
-
     }
 
     @RequestMapping(value = "question", method = RequestMethod.GET)
