@@ -1,7 +1,11 @@
 package com.wy.qa.controller;
 
 import com.wy.qa.exception.QaException;
+import com.wy.qa.pojo.Bankcard;
+import com.wy.qa.pojo.Role;
 import com.wy.qa.pojo.User;
+import com.wy.qa.service.BankcardService;
+import com.wy.qa.service.RoleService;
 import com.wy.qa.service.UserService;
 import com.wy.qa.util.RandomUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 
@@ -18,6 +21,10 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private RoleService roleService;
+    @Autowired
+    private BankcardService bankcardService;
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
     @ResponseBody
@@ -52,12 +59,16 @@ public class UserController {
             session.removeAttribute("answer");
             try {
                 User user = userService.login(email, pwd);
+                Role role = roleService.getById(user.getRoleId());
+                Bankcard bankcard = bankcardService.getById(user.getUserId());
                 if (user.getStatus() == 2) {
                     //账号被封禁
                     return "status error";
                 } else {
                     //账号未被封禁
                     session.setAttribute("user", user);
+                    session.setAttribute("role", role);
+                    session.setAttribute("bankcard", bankcard);
                 }
             } catch (QaException e) {
                 e.printStackTrace();

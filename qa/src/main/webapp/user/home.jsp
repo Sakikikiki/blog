@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -38,8 +40,8 @@
 
             <a class="avatar" href="user/home.jsp">
                 <img alt="" src="static/res/images/avatar/11.jpg">
-                <cite>贤心</cite>
-                <i>VIP</i>
+                <cite>${sessionScope.user.username}</cite>
+                <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
                 <a href="user/set.jsp"><i class="iconfont icon-shezhi"></i>设置</a>
@@ -52,29 +54,32 @@
 <div class="fly-home" style="background-image: url();">
     <img alt="{{info.username}}" src="static/res/images/avatar/11.jpg">
     <h1>
-        贤心
+        ${sessionScope.user.username}
         <i class="iconfont icon-nan"></i>
         <!-- <i class="iconfont icon-nv"></i> -->
 
     </h1>
     <p class="fly-home-info">
-        <i class="iconfont icon-zuichun" title="飞吻"></i><span style="color: #FF7200;">67206飞吻</span>
-        <i class="iconfont icon-shijian"></i><span>2015-06-17 加入</span>
-        <i class="iconfont icon-chengshi"></i><span>来自杭州</span>
+        <i class="iconfont icon-zuichun" title="飞吻"></i><span style="color: #FF7200;">${sessionScope.user.money}飞吻</span>
+        <i class="iconfont icon-shijian"></i><span>${sessionScope.user.createtime} 加入</span>
+        <i class="iconfont icon-chengshi"></i><span>来自${sessionScope.user.city}</span>
     </p>
-    <p class="fly-home-sign">（人生仿若一场修行）</p>
+    <p class="fly-home-sign">${sessionScope.user.motto}</p>
 </div>
 
 <div class="main fly-home-main">
     <div class="layui-inline fly-home-jie">
         <div class="fly-panel">
-            <h3 class="fly-panel-title">贤心 最近的提问</h3>
+            <h3 class="fly-panel-title">${sessionScope.user.username} 最近的提问</h3>
             <ul class="jie-row">
-                <li>
-                    <a class="jie-title" href="post/detail.jsp">使用 layui 秒搭后台大布局（基本结构）</a>
-                    <i>1天前</i>
-                    <em>1136阅/27答</em>
-                </li>
+                <c:forEach items="">
+                    <li>
+                        <a class="jie-title" href="post/detail.jsp">使用 layui 秒搭后台大布局（基本结构）</a>
+                        <i>1天前</i>
+                        <em>1136阅/27答</em>
+                    </li>
+                </c:forEach>
+
                 <li>
                     <a class="jie-title" href="post/detail.jsp">使用 layui 秒搭后台大布局（基本结构）</a>
                     <i>1天前</i>
@@ -112,7 +117,7 @@
 
     <div class="layui-inline fly-home-da">
         <div class="fly-panel">
-            <h3 class="fly-panel-title">贤心 最近的回答</h3>
+            <h3 class="fly-panel-title">${sessionScope.user.username} 最近的回答</h3>
             <ul class="home-jieda">
                 <li>
                     <p>

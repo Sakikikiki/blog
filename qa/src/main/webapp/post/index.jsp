@@ -38,8 +38,8 @@
 
             <a class="avatar" href="user/index.jsp">
                 <img src="static/res/images/avatar/11.jpg" alt="">
-                <cite>贤心</cite>
-                <i>VIP</i>
+                <cite>${sessionScope.user.username}</cite>
+                <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
                 <a href="user/set.jsp">

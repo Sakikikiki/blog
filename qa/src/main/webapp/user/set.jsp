@@ -38,16 +38,12 @@
 
             <a class="avatar" href="user/home.jsp">
                 <img src="static/res/images/avatar/11.jpg" alt="">
-                <cite>贤心</cite>
-                <i>VIP</i>
+                <cite>${sessionScope.user.username}</cite>
+                <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
-                <a href="user/set.jsp">
-                    <i class="iconfont icon-shezhi"></i>设置
-                </a>
-                <a href="user/login.jsp">
-                    <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
-                </a>
+                <a href="user/set.jsp"><i class="iconfont icon-shezhi"></i>设置</a>
+                <a href="user/login.jsp"><i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了</a>
             </div>
         </div>
     </div>
@@ -66,7 +62,7 @@
                 <i class="layui-icon">&#xe612;</i>用户中心
             </a>
         </li>
-        <li class="layui-nav-item ">
+        <li class="layui-nav-item layui-this">
             <a href="user/set.jsp">
                 <i class="layui-icon">&#xe620;</i>基本设置
             </a>
@@ -76,7 +72,7 @@
                 <i class="layui-icon">&#xe611;</i>我的消息
             </a>
         </li>
-        <li class="layui-nav-item  layui-this">
+        <li class="layui-nav-item">
             <a href="user/vip.jsp">
                 <i class="layui-icon">&#xe61a;</i>账户充值/会员
             </a>
@@ -107,7 +103,8 @@
                             <label class="layui-form-label" for="L_email">邮箱</label>
                             <div class="layui-input-inline">
                                 <label>
-                                    <input class="layui-input" id="L_email" lay-verify="email" required type="text">
+                                    <input class="layui-input" id="L_email" lay-verify="email" required type="text"
+                                           value="${sessionScope.user.email}">
                                 </label>
                             </div>
                         </div>
@@ -116,7 +113,7 @@
                             <div class="layui-input-inline">
                                 <label>
                                     <input class="layui-input" id="L_username" lay-verify="required" required
-                                           type="text">
+                                           type="text" value="${sessionScope.user.username}">
                                 </label>
                             </div>
                             <div class="layui-inline">
@@ -130,7 +127,7 @@
                             <label class="layui-form-label" for="L_email">银行卡</label>
                             <div class="layui-input-inline">
                                 <label>
-                                    <input class="layui-input" type="text">
+                                    <input class="layui-input" type="text" value="${sessionScope.bankcard.cardId}">
                                 </label>
                             </div>
                         </div>
@@ -139,7 +136,8 @@
                             <label class="layui-form-label" for="L_city">城市</label>
                             <div class="layui-input-inline">
                                 <label>
-                                    <input class="layui-input" id="L_city" type="text" value="">
+                                    <input class="layui-input" id="L_city" type="text"
+                                           value="${sessionScope.user.city}">
                                 </label>
                             </div>
                         </div>
@@ -150,6 +148,7 @@
                                     <textarea autocomplete="off" class="layui-textarea" id="L_sign"
                                               placeholder="随便写些什么刷下存在感"
                                               style="height: 80px;">
+                                        ${sessionScope.user.motto}
                                     </textarea>
                                 </label>
                             </div>
