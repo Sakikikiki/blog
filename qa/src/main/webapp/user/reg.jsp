@@ -117,7 +117,7 @@
                                 </div>
                             </div>
                             <div class="layui-form-item">
-                                <input class="layui-btn" type="submit" id="regBtn" value="立即提交"/>
+                                <input class="layui-btn" type="button" id="regBtn" value="立即提交"/>
                             </div>
                         </form>
                     </div>
@@ -175,7 +175,7 @@
         $("#regForm").ajaxSubmit({
             dataType: "text",
             success: function (responseText) {
-                if (responseText === "success") {
+                if (responseText === "200") {
                     location.href = "user/login.jsp";
                 } else {
                     alert("验证码错误");
