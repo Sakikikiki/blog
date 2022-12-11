@@ -36,13 +36,13 @@
         <div class="nav-user">
             <!-- 登入后的状态 -->
 
-            <a class="avatar" href="user/home.jsp">
+            <a class="avatar" href="user/home">
                 <img src="static/res/images/avatar/11.jpg" alt="">
                 <cite>${sessionScope.user.username}</cite>
                 <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
-                <a href="user/set.jsp"><i class="iconfont icon-shezhi"></i>设置</a>
+                <a href="user/set"><i class="iconfont icon-shezhi"></i>设置</a>
                 <a href="user/login.jsp"><i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了</a>
             </div>
         </div>
@@ -53,32 +53,32 @@
 <div class="main fly-user-main layui-clear">
     <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
         <li class="layui-nav-item">
-            <a href="user/home.jsp">
+            <a href="user/home">
                 <i class="layui-icon">&#xe609;</i>我的主页
             </a>
         </li>
-        <li class="layui-nav-item ">
-            <a href="user/index.jsp">
+        <li class="layui-nav-item">
+            <a href="user/index">
                 <i class="layui-icon">&#xe612;</i>用户中心
             </a>
         </li>
         <li class="layui-nav-item layui-this">
-            <a href="user/set.jsp">
+            <a href="user/set">
                 <i class="layui-icon">&#xe620;</i>基本设置
             </a>
         </li>
         <li class="layui-nav-item">
-            <a href="user/message.jsp">
+            <a href="user/message">
                 <i class="layui-icon">&#xe611;</i>我的消息
             </a>
         </li>
-        <li class="layui-nav-item">
-            <a href="user/vip.jsp">
+        <li class="layui-nav-item  ">
+            <a href="user/vip">
                 <i class="layui-icon">&#xe61a;</i>账户充值/会员
             </a>
         </li>
         <li class="layui-nav-item">
-            <a href="user/report.jsp">
+            <a href="user/report">
                 <i class="layui-icon">&#xe61a;</i>审核举报
             </a>
         </li>
@@ -102,19 +102,15 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label" for="L_email">邮箱</label>
                             <div class="layui-input-inline">
-                                <label>
-                                    <input class="layui-input" id="L_email" lay-verify="email" required type="text"
-                                           value="${sessionScope.user.email}">
-                                </label>
+                                <input class="layui-input" id="L_email" lay-verify="email" required type="text"
+                                       value="${sessionScope.user.email}">
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label" for="L_username">昵称</label>
                             <div class="layui-input-inline">
-                                <label>
-                                    <input class="layui-input" id="L_username" lay-verify="required" required
-                                           type="text" value="${sessionScope.user.username}">
-                                </label>
+                                <input class="layui-input" id="L_username" lay-verify="required" required
+                                       type="text" value="${sessionScope.user.username}">
                             </div>
                             <div class="layui-inline">
                                 <div class="layui-input-inline">
@@ -124,33 +120,28 @@
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label" for="L_email">银行卡</label>
+                            <label class="layui-form-label" for="L_bankcard">银行卡</label>
                             <div class="layui-input-inline">
-                                <label>
-                                    <input class="layui-input" type="text" value="${sessionScope.bankcard.cardId}">
-                                </label>
+                                <input class="layui-input" id="L_bankcard" type="text"
+                                       value="${sessionScope.bankcard.cardId}" readonly>
                             </div>
                         </div>
 
                         <div class="layui-form-item">
                             <label class="layui-form-label" for="L_city">城市</label>
                             <div class="layui-input-inline">
-                                <label>
-                                    <input class="layui-input" id="L_city" type="text"
-                                           value="${sessionScope.user.city}">
-                                </label>
+                                <input class="layui-input" id="L_city" type="text"
+                                       value="${sessionScope.user.city}">
                             </div>
                         </div>
                         <div class="layui-form-item layui-form-text">
                             <label class="layui-form-label" for="L_sign">签名</label>
                             <div class="layui-input-block">
-                                <label>
                                     <textarea autocomplete="off" class="layui-textarea" id="L_sign"
                                               placeholder="随便写些什么刷下存在感"
                                               style="height: 80px;">
                                         ${sessionScope.user.motto}
                                     </textarea>
-                                </label>
                             </div>
                         </div>
                         <div class="layui-form-item">

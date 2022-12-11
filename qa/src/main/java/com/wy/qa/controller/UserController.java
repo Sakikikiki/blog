@@ -87,4 +87,36 @@ public class UserController {
         return question;
     }
 
+    @RequestMapping("home")
+    public String home() {
+        return "user/home";
+    }
+
+    @RequestMapping("index")
+    public String index() {
+        return "user/index";
+    }
+
+    @RequestMapping("set")
+    public String set() {
+        return "user/set";
+    }
+
+    @RequestMapping("message")
+    public String message() {
+        return "user/message";
+    }
+
+    @RequestMapping("vip")
+    public String vip() {
+        return "user/vip";
+    }
+
+    @RequestMapping("report")
+    public String report() {
+        return "user/report";
+    }
+
+
+
 }
