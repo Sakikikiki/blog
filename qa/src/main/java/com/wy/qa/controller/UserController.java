@@ -87,6 +87,22 @@ public class UserController {
         return question;
     }
 
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    public void update(String username, String sex, String city, String motto, HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        try {
+            userService.updateSelfInfo(username, Integer.valueOf(sex), city, motto, user.getUserId());
+        } catch (QaException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping("exit")
+    public String exit(HttpSession session) {
+        session.invalidate();
+        return "user/login";
+    }
+
     @RequestMapping("login")
     public String login() {
         return "user/login";
@@ -126,7 +142,6 @@ public class UserController {
     public String report() {
         return "user/report";
     }
-
 
 
 }

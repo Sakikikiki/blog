@@ -26,9 +26,9 @@
 
 <div class="header">
     <div class="main">
-        <a class="logo" href="post/index.jsp" title="网博">网博社区</a>
+        <a class="logo" href="post/index" title="网博">网博社区</a>
         <div class="nav">
-            <a class="nav-this" href="post/index.jsp">
+            <a class="nav-this" href="post/index">
                 <i class="iconfont icon-wenda"></i>问答
             </a>
         </div>
@@ -45,7 +45,7 @@
                 <a href="user/set">
                     <i class="iconfont icon-shezhi"></i>设置
                 </a>
-                <a href="user/login">
+                <a href="user/exit">
                     <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
                 </a>
             </div>
@@ -59,9 +59,9 @@
         <span>
           <a href="" class="tab-this">全部</a>
           <a href="">未结帖</a>
-          <a href="">已采纳</a>
+              <a href="">已采纳</a>
           <a href="">置顶帖</a>
-          <a href="user/index.jsp">我的帖</a>
+          <a href="user/index">我的帖</a>
         </span>
                 <form action="" class="fly-search">
                     <i class="iconfont icon-sousuo"></i>
@@ -69,21 +69,21 @@
                         <input class="layui-input" autocomplete="off" placeholder="搜索内容，回车跳转" type="text" name="q">
                     </label>
                 </form>
-                <a href="post/add.jsp" class="layui-btn jie-add">发布问题</a>
+                <a href="post/add" class="layui-btn jie-add">发布问题</a>
             </div>
 
             <ul class="fly-list">
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/0.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp">基于Layui的轻量级问答社区页面模版</a>
+                        <a href="post/detail">基于Layui的轻量级问答社区页面模版</a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
                         <span>
-                            <a href="user/home.jsp">贤心</a>
+                            <a href="user/home">贤心</a>
                         </span>
                         <span>刚刚</span>
                         <span>layui框架综合</span>
@@ -94,15 +94,15 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了</a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了</a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint"> 
@@ -113,15 +113,15 @@
                 </li>
 
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint"> 
@@ -131,15 +131,15 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -149,15 +149,15 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -167,15 +167,15 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -185,15 +185,15 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                         <span class="fly-tip-stick">置顶</span>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -203,14 +203,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint"> 
@@ -220,14 +220,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -237,14 +237,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -254,14 +254,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -271,14 +271,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -288,14 +288,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">
@@ -305,14 +305,14 @@
                     </p>
                 </li>
                 <li class="fly-list-li">
-                    <a href="user/home.jsp" class="fly-list-avatar">
+                    <a href="user/home" class="fly-list-avatar">
                         <img src="static/res/images/avatar/00.jpg" alt="">
                     </a>
                     <h2 class="fly-tip">
-                        <a href="post/detail.jsp"> Layui 首个版本千呼万唤，终于滚出来了 </a>
+                        <a href="post/detail"> Layui 首个版本千呼万唤，终于滚出来了 </a>
                     </h2>
                     <p>
-                        <span><a href="user/home.jsp">纸飞机</a></span>
+                        <span><a href="user/home">纸飞机</a></span>
                         <span>30分钟前</span>
                         <span>技术闲谈</span>
                         <span class="fly-list-hint">

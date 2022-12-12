@@ -21,6 +21,8 @@
     <link href="static/res/layui/css/layui.css" rel="stylesheet">
     <link href="static/res/css/global.css" rel="stylesheet">
     <script src="static/res/layui/layui.js"></script>
+    <script src="static/jquery/jquery-1.8.3.js"></script>
+    <script src="static/jquery/jquery-form.js"></script>
 </head>
 <body>
 
@@ -42,8 +44,12 @@
                 <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
-                <a href="user/set"><i class="iconfont icon-shezhi"></i>设置</a>
-                <a href="user/login"><i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了</a>
+                <a href="user/set">
+                    <i class="iconfont icon-shezhi"></i>设置
+                </a>
+                <a href="user/exit">
+                    <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
+                </a>
             </div>
         </div>
     </div>
@@ -98,12 +104,13 @@
             </ul>
             <div class="layui-tab-content" style="padding: 20px 0;">
                 <div class="layui-form layui-form-pane layui-tab-item layui-show">
-                    <form method="post">
+
+                    <form id="updateForm" action="user/update" method="post">
                         <div class="layui-form-item">
                             <label class="layui-form-label" for="L_email">邮箱</label>
                             <div class="layui-input-inline">
                                 <input class="layui-input" id="L_email" lay-verify="email" required type="text"
-                                       value="${sessionScope.user.email}">
+                                       value="${sessionScope.user.email}" readonly>
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -126,7 +133,6 @@
                                        value="${sessionScope.bankcard.cardId}" readonly>
                             </div>
                         </div>
-
                         <div class="layui-form-item">
                             <label class="layui-form-label" for="L_city">城市</label>
                             <div class="layui-input-inline">
@@ -146,7 +152,7 @@
                         </div>
                         <div class="layui-form-item">
                             <label>
-                                <input class="layui-btn" value="确认修改"/>
+                                <input id="updateBtn" class="layui-btn" value="确认修改"/>
                             </label>
                         </div>
                     </form>
@@ -240,6 +246,16 @@
     }).extend({
         fly: 'index'
     }).use('fly');
+</script>
+<script type="text/javascript">
+    $("#updateBtn").click(function () {
+        $("#updateForm").ajaxSubmit({
+            dataType: "text",
+            success: function () {
+
+            }
+        });
+    });
 </script>
 
 </body>

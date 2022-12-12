@@ -38,9 +38,9 @@
 <body>
 <div class="header">
     <div class="main">
-        <a class="logo" href="post/index.jsp" title="网博">网博社区</a>
+        <a class="logo" href="post/index" title="网博">网博社区</a>
         <div class="nav">
-            <a class="nav-this" href="post/index.jsp">
+            <a class="nav-this" href="post/index">
                 <i class="iconfont icon-wenda"></i>
                 问答
             </a>
@@ -58,7 +58,7 @@
                 <a href="user/set">
                     <i class="iconfont icon-shezhi"></i>设置
                 </a>
-                <a href="user/login">
+                <a href="user/exit">
                     <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
                 </a>
             </div>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="detail-about">
-                    <a class="jie-user" href="user/home.jsp">
+                    <a class="jie-user" href="user/home">
                         <img src="static/res/images/avatar/0.jpg" alt="头像">
                         <cite>压缩
                             <em>2017-05-01发布</em>
@@ -133,7 +133,7 @@
                     <li data-id="12" class="jieda-daan">
                         <a name="item-121212121212"></a>
                         <div class="detail-about detail-about-reply">
-                            <a class="jie-user" href="../user/home.jsp">
+                            <a class="jie-user" href="user/home">
                                 <img src="static/res/images/avatar/0.jpg" alt="">
                                 <cite>
                                     <i>纸飞机</i>
@@ -167,7 +167,7 @@
                     <li data-id="13">
                         <a name="item-121212121212"></a>
                         <div class="detail-about detail-about-reply">
-                            <a class="jie-user" href="../user/home.jsp">
+                            <a class="jie-user" href="user/home">
                                 <img src="static/res/images/avatar/0.jpg" alt="">
                                 <cite>
                                     <i>香菇</i>

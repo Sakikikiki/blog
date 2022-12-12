@@ -26,9 +26,9 @@
 
 <div class="header">
     <div class="main">
-        <a class="logo" href="post/index.jsp" title="网博">网博社区</a>
+        <a class="logo" href="post/index" title="网博">网博社区</a>
         <div class="nav">
-            <a class="nav-this" href="post/index.jsp">
+            <a class="nav-this" href="post/index">
                 <i class="iconfont icon-wenda"></i>问答
             </a>
         </div>
@@ -45,7 +45,7 @@
                 <a href="user/set">
                     <i class="iconfont icon-shezhi"></i>设置
                 </a>
-                <a href="user/login">
+                <a href="user/exit">
                     <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
                 </a>
             </div>
