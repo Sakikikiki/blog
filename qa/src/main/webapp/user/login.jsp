@@ -38,17 +38,17 @@
         <div class="nav-user">
             <!-- 登入后的状态 -->
 
-            <a class="avatar" href="user/home.jsp">
+            <a class="avatar" href="user/home">
                 <img alt="" src="static/res/images/avatar/11.jpg">
                 <cite>${sessionScope.user.username}</cite>
                 <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
-                <a href="user/set.jsp">
+                <a href="user/set">
                     <i class="iconfont icon-shezhi"></i>
                     设置
                 </a>
-                <a href="user/login.jsp">
+                <a href="user/login">
                     <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>
                     退了
                 </a>
@@ -69,7 +69,7 @@
             <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
                 <div class="layui-tab-item layui-show">
                     <div class="layui-form layui-form-pane">
-                        <form action="user/login" method="post" id="loginForm">
+                        <form action="user/doLogin" method="post" id="loginForm">
                             <div class="layui-form-item">
                                 <label class="layui-form-label" for="L_email">邮箱</label>
                                 <div class="layui-input-inline">
@@ -157,7 +157,7 @@
             dataType: "text",
             success: function (responseText) {
                 if (responseText === "200") {
-                    location.href = "user/home.jsp";
+                    location.href = "user/home";
                 } else {
                     if (responseText === "wrong code") {
                         alert("验证码错误");

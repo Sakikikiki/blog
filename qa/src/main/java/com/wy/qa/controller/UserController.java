@@ -26,7 +26,7 @@ public class UserController {
     @Autowired
     private BankcardService bankcardService;
 
-    @RequestMapping(value = "register", method = RequestMethod.POST)
+    @RequestMapping(value = "doRegister", method = RequestMethod.POST)
     @ResponseBody
     public String register(User user, String answer, HttpSession session) {
         String serverAnswer = (String) session.getAttribute("answer");
@@ -46,7 +46,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "login", method = RequestMethod.POST)
+    @RequestMapping(value = "doLogin", method = RequestMethod.POST)
     @ResponseBody
     public String login(String email, String pwd, String answer, HttpSession session) {
         String severAnswer = (String) session.getAttribute("answer");
@@ -85,6 +85,16 @@ public class UserController {
         String answer = questionAndAnswer.substring(5);
         session.setAttribute("answer", answer);
         return question;
+    }
+
+    @RequestMapping("login")
+    public String login() {
+        return "user/login";
+    }
+
+    @RequestMapping("register")
+    public String register() {
+        return "user/reg";
     }
 
     @RequestMapping("home")

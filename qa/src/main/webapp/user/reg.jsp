@@ -37,16 +37,16 @@
         <div class="nav-user">
             <!-- 登入后的状态 -->
 
-            <a class="avatar" href="user/home.jsp">
+            <a class="avatar" href="user/home">
                 <img src="static/res/images/avatar/11.jpg" alt="">
                 <cite>${sessionScope.user.username}</cite>
                 <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
-                <a href="user/set.jsp">
+                <a href="user/set">
                     <i class="iconfont icon-shezhi"></i>设置
                 </a>
-                <a href="user/login.jsp">
+                <a href="user/login">
                     <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
                 </a>
             </div>
@@ -66,7 +66,7 @@
                 <div class="layui-tab-item layui-show">
                     <div class="layui-form layui-form-pane">
 
-                        <form action="user/register" method="post" id="regForm">
+                        <form action="user/doRegister" method="post" id="regForm">
                             <div class="layui-form-item">
                                 <label class="layui-form-label" for="L_email">邮箱</label>
                                 <div class="layui-input-inline">
@@ -176,7 +176,7 @@
             dataType: "text",
             success: function (responseText) {
                 if (responseText === "200") {
-                    location.href = "user/login.jsp";
+                    location.href = "user/login";
                 } else {
                     alert("验证码错误");
                     $.ajax({

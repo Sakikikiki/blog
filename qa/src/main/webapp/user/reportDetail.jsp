@@ -35,16 +35,16 @@
         <div class="nav-user">
             <!-- 登入后的状态 -->
 
-            <a class="avatar" href="user/home.jsp">
+            <a class="avatar" href="user/home">
                 <img src="static/res/images/avatar/11.jpg" alt="">
                 <cite>${sessionScope.user.username}</cite>
                 <i>${sessionScope.role.roleName}</i>
             </a>
             <div class="nav">
-                <a href="user/set.jsp">
+                <a href="user/set">
                     <i class="iconfont icon-shezhi"></i>设置
                 </a>
-                <a href="user/login.jsp">
+                <a href="user/login">
                     <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了
                 </a>
             </div>
@@ -56,32 +56,32 @@
 <div class="main fly-user-main layui-clear">
     <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
         <li class="layui-nav-item">
-            <a href="user/home.jsp">
+            <a href="user/home">
                 <i class="layui-icon">&#xe609;</i>我的主页
             </a>
         </li>
-        <li class="layui-nav-item ">
-            <a href="user/index.jsp">
+        <li class="layui-nav-item">
+            <a href="user/index">
                 <i class="layui-icon">&#xe612;</i>用户中心
             </a>
         </li>
-        <li class="layui-nav-item ">
-            <a href="user/set.jsp">
+        <li class="layui-nav-item">
+            <a href="user/set">
                 <i class="layui-icon">&#xe620;</i>基本设置
             </a>
         </li>
         <li class="layui-nav-item">
-            <a href="user/message.jsp">
+            <a href="user/message">
                 <i class="layui-icon">&#xe611;</i>我的消息
             </a>
         </li>
         <li class="layui-nav-item  layui-this">
-            <a href="user/vip.jsp">
+            <a href="user/vip">
                 <i class="layui-icon">&#xe61a;</i>账户充值/会员
             </a>
         </li>
         <li class="layui-nav-item">
-            <a href="user/report.jsp">
+            <a href="user/report">
                 <i class="layui-icon">&#xe61a;</i>审核举报
             </a>
         </li>

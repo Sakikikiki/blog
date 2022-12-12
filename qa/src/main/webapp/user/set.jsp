@@ -43,7 +43,7 @@
             </a>
             <div class="nav">
                 <a href="user/set"><i class="iconfont icon-shezhi"></i>设置</a>
-                <a href="user/login.jsp"><i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了</a>
+                <a href="user/login"><i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;"></i>退了</a>
             </div>
         </div>
     </div>
